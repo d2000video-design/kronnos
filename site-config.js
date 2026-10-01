@@ -14,8 +14,8 @@ window.KRONNOS = {
       "photos": [
         {
           "image": "assets/proyecto-01-1.webp",
-          "label": "Antes · recreación con IA",
-          "alt": "Construcción de isla de cocina — Antes · recreación con IA"
+          "label": "Antes*",
+          "alt": "Construcción de isla de cocina — Antes*"
         },
         {
           "image": "assets/proyecto-01-2.webp",
@@ -38,8 +38,8 @@ window.KRONNOS = {
         },
         {
           "image": "assets/proyecto-02-2.webp",
-          "label": "Acabado · recreación con IA",
-          "alt": "Colocación de pavimento cerámico — Acabado · recreación con IA"
+          "label": "Acabado*",
+          "alt": "Colocación de pavimento cerámico — Acabado*"
         }
       ]
     },
@@ -57,8 +57,8 @@ window.KRONNOS = {
         },
         {
           "image": "assets/proyecto-03-2.webp",
-          "label": "Acabado · recreación con IA",
-          "alt": "Instalación de tabiques de yeso laminado — Acabado · recreación con IA"
+          "label": "Acabado*",
+          "alt": "Instalación de tabiques de yeso laminado — Acabado*"
         }
       ]
     },
@@ -76,8 +76,8 @@ window.KRONNOS = {
         },
         {
           "image": "assets/proyecto-04-2.webp",
-          "label": "Acabado · recreación con IA",
-          "alt": "Instalación de suelo flotante — Acabado · recreación con IA"
+          "label": "Acabado*",
+          "alt": "Instalación de suelo flotante — Acabado*"
         }
       ]
     },
@@ -95,8 +95,8 @@ window.KRONNOS = {
         },
         {
           "image": "assets/proyecto-05-2.webp",
-          "label": "Acabado · recreación con IA",
-          "alt": "Reforma de baño — Acabado · recreación con IA"
+          "label": "Acabado*",
+          "alt": "Reforma de baño — Acabado*"
         }
       ]
     },
@@ -114,8 +114,8 @@ window.KRONNOS = {
         },
         {
           "image": "assets/proyecto-06-2.webp",
-          "label": "Acabado · recreación con IA",
-          "alt": "Colocación de pavimento de mosaico en baño — Acabado · recreación con IA"
+          "label": "Acabado*",
+          "alt": "Colocación de pavimento de mosaico en baño — Acabado*"
         }
       ]
     }
