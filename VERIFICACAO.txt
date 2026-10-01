@@ -1,14 +1,1 @@
-KRONNOS — Verificação
-
-Build estático: passou.
-JavaScript: sintaxe verificada.
-Recursos locais: HTTP 200.
-Âncoras: todos os alvos existem.
-Idioma: espanhol.
-Logos: PNG com transparência.
-
-Limites:
-Verificação visual e interativa em navegador não concluída: navegador indisponível e download truncado.
-GitHub e Vercel instalados, mas as operações não estão expostas nesta sessão. Nenhum repositório remoto ou deployment foi criado.
-Contacto aguarda e-mail/WhatsApp reais; formulário não simula envios.
-Portfólio aguarda obras reais. A imagem da capa é conceptual e identificada.
+Build e sintaxe JavaScript: aprovados. Testes DOM: seis projetos, doze fotos, galeria (abertura, navegação, teclado e fechamento), menu, links de telefone e WhatsApp, ausência de formulário. Verificação visual local indisponível: o ambiente impede a execução do navegador.
