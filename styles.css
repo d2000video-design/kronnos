@@ -13,3 +13,5 @@ nav{font-size:14px;gap:28px}.header{height:84px}.eyebrow,.section-label{font-siz
 
 .portfolio-note{font-size:13px;line-height:1.6;color:#60696f;margin-top:28px;max-width:900px}
 .hero-visual>img{object-position:center center}
+
+.construction-scope{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;margin:0 0 36px}.construction-scope article{border-top:2px solid var(--gold);padding:22px 0 4px}.construction-scope article>span{font-size:12px;letter-spacing:1.5px;color:#86693d}.construction-scope h3{font-size:27px;line-height:1.2;letter-spacing:-.6px;margin:16px 0 12px}.construction-scope p{font-size:17px;line-height:1.65;color:#48525a}@media(max-width:900px){.construction-scope{grid-template-columns:1fr;gap:22px}.construction-scope article{padding-top:18px}.construction-scope h3{margin-top:12px}}
