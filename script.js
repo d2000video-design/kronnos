@@ -1,9 +1,13 @@
 'use strict';
 const config = window.KRONNOS || {};
+const isEnglish = document.documentElement.lang === 'en-GB';
+const labels = isEnglish
+  ? { openMenu: 'Open menu', closeMenu: 'Close menu', whatsapp: 'Message us on WhatsApp', zoom: 'Enlarge' }
+  : { openMenu: 'Abrir menú', closeMenu: 'Cerrar menú', whatsapp: 'Hablar por WhatsApp', zoom: 'Ampliar' };
 const toggle = document.querySelector('.menu-toggle');
 const nav = document.querySelector('#navigation');
-function closeMenu() { toggle.setAttribute('aria-expanded', 'false'); toggle.setAttribute('aria-label', 'Abrir menú'); nav.classList.remove('open'); }
-toggle.addEventListener('click', () => { const open = toggle.getAttribute('aria-expanded') !== 'true'; toggle.setAttribute('aria-expanded', String(open)); toggle.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú'); nav.classList.toggle('open', open); });
+function closeMenu() { toggle.setAttribute('aria-expanded', 'false'); toggle.setAttribute('aria-label', labels.openMenu); nav.classList.remove('open'); }
+toggle.addEventListener('click', () => { const open = toggle.getAttribute('aria-expanded') !== 'true'; toggle.setAttribute('aria-expanded', String(open)); toggle.setAttribute('aria-label', open ? labels.closeMenu : labels.openMenu); nav.classList.toggle('open', open); });
 nav.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
 window.matchMedia('(min-width: 901px)').addEventListener('change', closeMenu);
@@ -14,7 +18,7 @@ const emailValid = typeof config.email === 'string' && /^[^\s@]+@[^\s@]+\.[^\s@]
 if (emailValid) addContact(config.email, `mailto:${config.email}`);
 if (config.phone) addContact(config.phone, `tel:${config.phone.replace(/[^+\d]/g, '')}`);
 const whatsappValid = /^\d{8,15}$/.test(config.whatsapp || '');
-if (whatsappValid) addContact('Hablar por WhatsApp ↗', `https://wa.me/${config.whatsapp}`, true);
+if (whatsappValid) addContact(`${labels.whatsapp} ↗`, `https://wa.me/${config.whatsapp}`, true);
 if (/^https:\/\/(www\.)?instagram\.com\//.test(config.instagram || '')) addContact('Instagram ↗', config.instagram, true);
 const projectList = document.querySelector('#project-list');
 const projects = Array.isArray(config.projects) ? config.projects : [];
@@ -38,9 +42,9 @@ projects.forEach(project => {
   (project.photos || [{image:project.image,alt:project.alt,label:''}]).forEach(photo => {
     const index = photoOffset++;
     const figure = document.createElement('figure');
-    const button = document.createElement('button'); button.className = 'photo-trigger'; button.type = 'button'; button.setAttribute('aria-label', `Ampliar: ${project.title}, ${photo.label}`);
+    const button = document.createElement('button'); button.className = 'photo-trigger'; button.type = 'button'; button.setAttribute('aria-label', `${labels.zoom}: ${project.title}, ${photo.label}`);
     const img = document.createElement('img'); img.src = photo.image; img.alt = photo.alt || project.title; img.loading = 'lazy'; img.width = 1448; img.height = 1086;
-    const zoom = document.createElement('span'); zoom.className = 'zoom-hint'; zoom.textContent = 'Ampliar ↗'; zoom.setAttribute('aria-hidden','true');
+    const zoom = document.createElement('span'); zoom.className = 'zoom-hint'; zoom.textContent = `${labels.zoom} ↗`; zoom.setAttribute('aria-hidden','true');
     button.append(img,zoom); button.addEventListener('click',()=> {lastPhotoTrigger=button;showPhoto(index);photoDialog.showModal();});
     const caption = document.createElement('figcaption'); caption.textContent = photo.label;
     figure.append(button,caption);photos.append(figure);

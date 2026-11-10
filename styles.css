@@ -15,3 +15,24 @@ nav{font-size:14px;gap:28px}.header{height:84px}.eyebrow,.section-label{font-siz
 .hero-visual>img{object-position:center center}
 
 .construction-scope{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;margin:0 0 36px}.construction-scope article{border-top:2px solid var(--gold);padding:22px 0 4px}.construction-scope article>span{font-size:12px;letter-spacing:1.5px;color:#86693d}.construction-scope h3{font-size:27px;line-height:1.2;letter-spacing:-.6px;margin:16px 0 12px}.construction-scope p{font-size:17px;line-height:1.65;color:#48525a}@media(max-width:900px){.construction-scope{grid-template-columns:1fr;gap:22px}.construction-scope article{padding-top:18px}.construction-scope h3{margin-top:12px}}
+
+/* Keep the language links visible even when the mobile menu is closed. */
+.language-switch{display:flex;align-items:center;gap:3px;margin-left:14px;flex:none}
+.language-switch a{display:grid;place-items:center;min-width:35px;min-height:36px;border:1px solid transparent;font-size:12px;letter-spacing:.05em}
+.language-switch a:hover,.language-switch a[aria-current="page"]{border-color:var(--gold);color:var(--gold)}
+.language-switch a:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.header nav{margin-left:auto}
+/* Show the original wordmark with a live English tagline. */
+.uk-logo{display:block;width:100%;max-width:210px;text-align:center;color:white}
+.uk-wordmark{display:block;width:100%;aspect-ratio:1336 / 222;overflow:hidden}
+.uk-wordmark img,.brand .uk-wordmark img,.footer-top .uk-wordmark img{display:block;width:100%;height:auto}
+.uk-tagline{display:block;margin-top:3px;font-size:10px;letter-spacing:.09em}
+.uk-logo::after{content:"";display:block;width:70%;margin:8px auto 0;border-bottom:1px solid currentColor}
+.footer-top .uk-logo{width:210px}
+@media(max-width:900px){
+  .header .brand{flex:0 1 165px;min-width:0}
+  .header .brand img{max-width:100%}
+  .menu-toggle{order:1}
+  .language-switch{margin-left:auto}
+  .footer-top .uk-logo{width:190px}
+}
